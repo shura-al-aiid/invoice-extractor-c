@@ -76,8 +76,8 @@ CSV output is also supported (the clean table to your file, the flags to a sibli
 ### Install
 
 ```bash
-git clone https://github.com/<your-username>/invoice-extractor.git
-cd invoice-extractor
+git clone https://github.com/shura-al-aiid/invoice-extractor-c.git
+cd invoice-extractor-c
 
 python -m venv .venv
 # Windows:  .venv\Scripts\activate
@@ -160,7 +160,7 @@ cell) plus a `Flag` explaining why — the principle is enforced in one place,
 ### Project structure
 
 ```
-invoice-extractor/
+invoice-extractor-c/
 ├── invoice_extractor/         # the package
 │   ├── __main__.py            # enables `python -m invoice_extractor`
 │   ├── cli.py                 # argument parsing & the command-line entry point
