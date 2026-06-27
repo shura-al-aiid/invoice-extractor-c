@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoice-extractor"
+version = "1.0.0"
+description = "Extract heterogeneous invoice PDFs into one clean spreadsheet — and flag, never guess, anything uncertain."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Hakim Alazif" }]
+keywords = ["invoice", "pdf", "data-extraction", "etl", "spreadsheet", "ocr"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Text Processing :: General",
+]
+dependencies = [
+    "pdfplumber==0.11.4",
+    "openpyxl==3.1.5",
+]
+
+[project.optional-dependencies]
+# Needed only to (re)generate the sample PDFs and the README preview image.
+samples = ["reportlab==4.2.5", "Pillow==12.2.0"]
+dev = ["pytest==8.3.4", "reportlab==4.2.5", "Pillow==12.2.0"]
+
+[project.scripts]
+invoice-extractor = "invoice_extractor.cli:main"
+
+[tool.setuptools]
+packages = ["invoice_extractor", "invoice_extractor.parsing"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+# Runtime dependencies
+pdfplumber==0.11.4      # digital-PDF text extraction
+openpyxl==3.1.5         # Excel (.xlsx) workbook output
+
+# Sample-data generation and README preview image (scripts/)
+reportlab==4.2.5        # builds the demonstration invoice PDFs
+Pillow==12.2.0          # renders the before/after preview PNG
+
+# Development / testing
+pytest==8.3.4
