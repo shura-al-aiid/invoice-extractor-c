@@ -16,8 +16,8 @@ venv/
 env/
 ENV/
 
-# Local Claude Code settings (personal, machine-specific)
-.claude/settings.local.json
+# Claude Code settings (personal/local — not part of the public project)
+.claude/
 
 # Editor / OS noise
 .vscode/
